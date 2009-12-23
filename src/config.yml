@@ -1,0 +1,60 @@
+--- 
+variables: 
+- id: track
+  type: IntegerVariable
+  busaccess: r
+  langaccess: rw
+  unit: Output__Display
+- id: mode
+  type: IntegerVariable
+  busaccess: r
+  langaccess: rw
+  unit: Output__Display
+- id: playlist
+  type: IntegerVariable
+  busaccess: r
+  langaccess: rw
+  unit: Output__Display
+- id: remaining_time
+  type: RealVariable
+  busaccess: r
+  langaccess: rw
+  unit: Output__Display
+- id: audio_data
+  type: BoolVariable
+  busaccess: r
+  langaccess: rw
+  unit: Output__Lautsprecher
+- id: T_Play
+  type: BoolVariable
+  busaccess: rw
+  langaccess: r
+  unit: Input__Tastenfeld
+- id: T_Stop
+  type: BoolVariable
+  busaccess: rw
+  langaccess: r
+  unit: Input__Tastenfeld
+- id: T_Pause
+  type: BoolVariable
+  busaccess: rw
+  langaccess: r
+  unit: Input__Tastenfeld
+- id: T_Next
+  type: BoolVariable
+  busaccess: rw
+  langaccess: r
+  unit: Input__Tastenfeld
+- id: T_Prev
+  type: BoolVariable
+  busaccess: rw
+  langaccess: r
+  unit: Input__Tastenfeld
+output: 
+  parameter: output.txt
+  plugin: txtfile_output
+lang: ruby
+langparams: player
+input: 
+  parameter: input.yml
+  plugin: txtfile_input

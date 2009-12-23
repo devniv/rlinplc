@@ -1,0 +1,48 @@
+-       playlist: 1
+        tracks:
+        -       trackno: 1
+                time: 4.35
+                title: "One Love"
+                interpret: "Blue"
+        -       trackno: 2
+                time: 4.51666666666667
+                title: "21 guns"
+                interpret: "Green Day"
+        -       trackno: 3
+                time: 5.71666666666667
+                title: "Rhythm of the Night"
+                interpret: "De Berge"
+        -       trackno: 4
+                time: 2.53
+                title: "Trouble is a friend of mine"
+                interpret: "Lenka"
+        -       trackno: 5
+                time: 4.38
+-       playlist: 2
+        tracks:
+        -       trackno: 1
+                time: 3.41
+                title: "Impossible"
+                interpret: "Merriweather, Daniel"
+        -       trackno: 2
+                time: 4.28
+                title: "Beautiful people"
+                interpret: "Petshop Boys"
+        -       trackno: 3
+                time: 2.47
+                title: "Someday"
+                interpret: "Nickelback"
+-       playlist: 3
+        tracks:
+        -       trackno: 1
+                time: 5.35
+                title: "Celebration"
+                interpret: "Madonna"
+        -       trackno: 2
+                time: 5.48
+                title: "With or without you"
+                interpret: "U2"
+        -       trackno: 3
+                time: 2.03
+                title: "Stone cold sober"
+                interpret: "Faith, Paloma"

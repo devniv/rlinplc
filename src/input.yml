@@ -1,0 +1,16 @@
+- time: 5
+  action: ~
+  parameter: ~
+- time: 3
+  action: press
+  parameter: T_Play
+- time: 2
+  action: release
+  parameter: T_Play
+- time: 50
+  action: ~
+  parameter: ~
+- time: 350
+  action: ~
+  parameter: ~
+
