@@ -68,11 +68,8 @@ class TInput
         processing = @input.slice!(0)
       end
       if processing['action'] == "press"
-#         debuglog "press action"
          processing['parameter']
       elsif processing['action'] == "release"
- #        debuglog "release action"
- #        debuglog "!" + processing['parameter']
 	 "!" + processing['parameter']
       else
          nil
@@ -82,17 +79,13 @@ class TInput
    def input
 	   button = buttonPressed()
 	   if button != nil and button[0] != 33
-             #testvar = @pi.ioget(button)
-	     #debuglog "testvar is a #{testvar.class}"
 	     if @pi.ioget(button).class != Array and @pi.ioget(button).value != true
 	       debuglog "button #{button} pressed"
 	          @pi.iotoggle(button)
 #	   elsif
 	     end
 	   elsif button != nil and button[0] == 33
-	     #debuglog "release action"
 	     button.delete! "\!"
-#	     debuglog(button)
 	     if @pi.ioget(button).class != Array and @pi.ioget(button).value != false
 	       debuglog "button #{button} released"
 	       @pi.iotoggle(button)
@@ -112,14 +105,8 @@ class IOManager
       config = RlinConfig.instance 
       @pi = ProcessImage.instance
       @mainlogger = Log.instance
-#         if config.output['plugin'] == "txtfile"
 	 @output = Plugin.registered_plugins[config.output['plugin']]
          @output.configure(config.output['parameter'])
-#	    @output = TOutput.new(config.output['parameter'])
-#	 end
-#	 if config.input['plugin'] == "txtfile"
-#	    @input = TInput.new(config.input['parameter'])
-#	 end
          @input = Plugin.registered_plugins[config.input['plugin']]
          @input.configure(config.input['parameter'])
 

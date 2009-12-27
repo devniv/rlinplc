@@ -68,13 +68,6 @@ class ProcessImage
 	end
 	Dir["rlinplc/plugins/*.rb"].each{|x| load x }
 	debuglog("loaded plugins")
-#	if config.lang == "ruby"
-#	   if config.langparams == "Player"
-#	      require 'rlinplc/Player'
-#	      @lang = Player.new
-#	   end
-#
-#	end
 	infolog("Initialization finished")
   end
  
@@ -146,19 +139,16 @@ class ProcessImage
   def ioget(varname)
     @booleanVariables.each do |h|
     if varname == h.id and h.busaccess.include? "r"
-#       debuglog "we found: #{h.id}"
        return h
     end
   end
     @integerVariables.each do |h|
     if varname == h.id and h.busaccess.include? "r"
-#       debuglog "we found: #{h.id}"
        return h
     end
   end
     @realVariables.each do |h|
     if varname == h.id and h.busaccess.include? "r"
-#       debuglog "we found: #{h.id}"
        return h
     end
   end
@@ -167,19 +157,16 @@ class ProcessImage
   def langget(varname)
     @booleanVariables.each do |h|
     if varname == h.id and h.langaccess.include? "r"
-#       debuglog "returning #{varname}"
        return h
     end
   end
     @integerVariables.each do |h|
     if varname == h.id and h.langaccess.include? "r"
-#       debuglog "returning #{varname}"
        return h
     end
   end
     @realVariables.each do |h|
     if varname == h.id and h.langaccess.include? "r"
-#       debuglog "returning #{varname}"
        return h
     end
   end
